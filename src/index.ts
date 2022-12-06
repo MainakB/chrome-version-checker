@@ -48,7 +48,8 @@ const getRequestLocalChromeVersion = (options: any) =>
   });
 
 async function getInstalledChromeVersion() {
-  const chromeOpts = ['--no-sandbox', '--headless'];
+  const chromeOpts = ['--no-sandbox', '--headless', '--disable-gpu'];
+
   const chromeInstance = await launch({chromeOpts} as any);
   const options = {
     host: '127.0.0.1',
