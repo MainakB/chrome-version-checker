@@ -1,0 +1,6 @@
+node_modules
+Reports
+_results_
+.lintstagedrc
+tsconfig.js
+dist

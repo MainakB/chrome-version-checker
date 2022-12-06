@@ -1,1 +1,1 @@
-# chrome-version-checker
+# edge-version-checker

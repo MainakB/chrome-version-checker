@@ -1,0 +1,53 @@
+{
+  "extends": ["airbnb-base", "prettier"],
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint"],
+  "env": {
+    "browser": true,
+    "es6": true,
+    "jquery": true
+  },
+  "globals": {
+    "WebdriverIO": "readonly",
+    "browser": "readonly"
+  },
+  "rules": {
+    "one-var": "off",
+    "no-bitwise": "off",
+    "no-underscore-dangle": "off",
+    // "no-unused-expressions": "error",
+    "prefer-template": "off",
+    "no-restricted-globals": "off",
+    "no-unused-vars": "off",
+    "no-shadow":"off",
+    "no-console": "warn",
+    // "camelcase": "off",
+    "global-require": "off",
+    "no-await-in-loop": "off",
+    "no-useless-constructor": "off",
+    // "prefer-destructuring": "off",
+    "import/prefer-default-export": "off",
+    "import/no-unresolved": "off",
+    "import/no-dynamic-require": "off",
+    "import/extensions": "off",
+    "no-restricted-syntax": ["error", "ForInStatement", "LabeledStatement", "WithStatement"],
+    "no-empty-function": ["warn", {"allow": ["constructors"]}],
+    "no-param-reassign": ["warn", {"props": false}],
+    "no-use-before-define": "off",
+    "dot-notation": "off",
+    "class-methods-use-this": "off",
+    "no-plusplus": [
+      "error",
+      {
+        "allowForLoopAfterthoughts": true
+      }
+    ],
+    "import/no-extraneous-dependencies": ["off"],
+    "@typescript-eslint/no-unused-vars": ["error"],
+    "@typescript-eslint/no-use-before-define": ["error"],
+
+    "@typescript-eslint/no-useless-constructor": ["off"],
+    "no-promise-executor-return": "off",
+    "@typescript-eslint/no-shadow": ["error"]
+  }
+}
