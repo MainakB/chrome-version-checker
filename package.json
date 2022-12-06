@@ -10,7 +10,8 @@
     "postversion": "git push && git push --tags",
     "compile:all": "tsc --diagnostics",
     "clean:build": "rimraf dist",
-    "compile": "run-s clean:build compile:all"
+    "compile": "run-s clean:build compile:all",
+    "test": "echo \"This is a demo test\""
   },
   "keywords": [],
   "author": "",
