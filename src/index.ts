@@ -48,9 +48,9 @@ const getRequestLocalChromeVersion = (options: any) =>
   });
 
 async function getInstalledChromeVersion() {
-  const chromeOpts = ['--no-sandbox', '--headless', '--disable-gpu'];
+  const chromeOpts = ['--headless', '--disable-gpu', '--no-sandbox'];
 
-  const chromeInstance = await launch({chromeOpts} as any);
+  const chromeInstance = await launch({chromeFlags: chromeOpts});
   const options = {
     host: '127.0.0.1',
     port: chromeInstance.port,
@@ -58,6 +58,8 @@ async function getInstalledChromeVersion() {
     requestType: 'GET',
   };
   const response: any = await getRequestLocalChromeVersion(options);
+  console.log('Ztarted with ', chromeOpts);
+
   await chromeInstance.kill();
 
   return response.Browser.split('/')[1];
