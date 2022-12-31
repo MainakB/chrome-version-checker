@@ -58,8 +58,6 @@ async function getInstalledChromeVersion() {
     requestType: 'GET',
   };
   const response: any = await getRequestLocalChromeVersion(options);
-  console.log('Ztarted with ', chromeOpts);
-
   await chromeInstance.kill();
 
   return response.Browser.split('/')[1];
