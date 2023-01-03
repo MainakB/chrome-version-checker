@@ -71,7 +71,10 @@ const handleFetch = async (apiUrl: string, options = {}) => {
   if (response.status >= 400) {
     throw Error(response.statusText);
   }
-  console.log(`Response received in ${endTime}ms`);
+  if (!process.env.API_TESTS) {
+    console.log(`Response received in ${endTime}ms`);
+  }
+
   return response;
 };
 
@@ -140,7 +143,10 @@ async function readVersion() {
   } else {
     currentVersion = await getInstalledChromeVersion();
   }
-  console.log(`Installed chrome browser version is ${currentVersion}`);
+  if (!process.env.API_TESTS) {
+    console.log(`Installed chrome browser version is ${currentVersion}`);
+  }
+
   currentVersion = currentVersion.substr(0, currentVersion.lastIndexOf('.'));
   const resultArray = await readChromedriverVersionXml();
 
